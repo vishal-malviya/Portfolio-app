@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio-app/static/css/main.d8df8e27.css",
+    "main.js": "/portfolio-app/static/js/main.0fcb091b.js",
+    "static/js/488.363560c5.chunk.js": "/portfolio-app/static/js/488.363560c5.chunk.js",
+    "static/media/lufthansa.png": "/portfolio-app/static/media/lufthansa.d4ebcfdcacc969a840d1.png",
+    "static/media/rakuten.png": "/portfolio-app/static/media/rakuten.98aa53828803c1789f02.png",
+    "static/media/profile.jpg": "/portfolio-app/static/media/profile.4499ca7eeb7fa5a66bed.jpg",
+    "static/media/cert1.png": "/portfolio-app/static/media/cert1.10b3061d80008183759c.png",
+    "static/media/cert2.png": "/portfolio-app/static/media/cert2.cb873fde0bed31ef7073.png",
+    "static/media/cert4.png": "/portfolio-app/static/media/cert4.feb6c8eb0c8c7d7eeecf.png",
+    "static/media/cert3.png": "/portfolio-app/static/media/cert3.26de9cf57e71a5c8d1e1.png",
+    "static/media/logo1.png": "/portfolio-app/static/media/logo1.da81133a625c123e45ab.png",
+    "static/media/Nagarro-Logo.png": "/portfolio-app/static/media/Nagarro-Logo.010ddb6cf738a6e59fa9.png",
+    "static/media/aws.svg": "/portfolio-app/static/media/aws.e87e8ee1a1130b2fba17cabf757055c3.svg",
+    "static/media/git.svg": "/portfolio-app/static/media/git.71a5b8fe639ba6f15b928a1e108adfe6.svg",
+    "static/media/spring.svg": "/portfolio-app/static/media/spring.5d2df8438f124a52ecb490b5d7a08b9d.svg",
+    "index.html": "/portfolio-app/index.html",
+    "main.d8df8e27.css.map": "/portfolio-app/static/css/main.d8df8e27.css.map",
+    "main.0fcb091b.js.map": "/portfolio-app/static/js/main.0fcb091b.js.map",
+    "488.363560c5.chunk.js.map": "/portfolio-app/static/js/488.363560c5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8df8e27.css",
+    "static/js/main.0fcb091b.js"
+  ]
+}
