@@ -1,0 +1,89 @@
+/* src/components/Skills.css */
+
+/* Skills Section */
+.skills-section {
+  text-align: center;
+  background-color: black; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh; /* Ensure the body fills at least the full viewport height */
+  margin: 0;
+}
+
+.skills-heading {
+  margin-top: 40px; /* Adjusted margin for heading */
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff; /* White heading */
+  opacity: 0.8;
+}
+
+.skills-list {
+  margin-top: 5%; /* Adjusted margin for list */
+  display: flex;
+  justify-content: center;
+  gap: 39px;
+  flex-wrap: wrap;
+  flex-grow: 1; /* Allow this section to take up available space */
+}
+
+.skill-item {
+  width: 105px;
+  height: 105px;
+  text-align: center;
+  background-color: #ffffff; /* Darker background for each skill item */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0.8;
+}
+
+.skill-item:hover {
+  transform: scale(1.48); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  background-color: #30A73B;
+}
+
+.skill-item img {
+  width: 105px;
+  height: 105px;
+  margin-bottom: 15px;
+}
+
+.skill-item p {
+  font-size: 1.1rem;
+  color: #ffffff; /* White text for skill name */
+  font-weight: 500;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 40px 20px;
+  }
+
+  .skills-heading {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+
+  .skills-list {
+    gap: 20px; /* Decrease the gap between skill items */
+  }
+
+  .skill-item {
+    width: 90px; /* Adjust size for mobile */
+    height: 90px;
+    padding: 10px;
+  }
+
+  .skill-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-item p {
+    font-size: 0.9rem; /* Adjust font size for mobile */
+  }
+}

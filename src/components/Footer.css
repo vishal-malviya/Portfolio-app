@@ -1,0 +1,53 @@
+/* Footer Styling */
+.footer {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 0px;
+  display: flex;
+  flex-direction: row; /* Keep everything in a single row */
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between elements */
+}
+
+.worked {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333; /* Color for "Worked with" text */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Space between logos */
+}
+
+.logo {
+  max-width: 120px; /* Adjust size of logos */
+  height: auto;
+  object-fit: contain;
+  filter: brightness(100%) contrast(90%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  filter: brightness(120%);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 80px; /* Smaller logos on mobile */
+  }
+
+  .worked {
+    font-size: 0.9rem; /* Smaller text on mobile */
+  }
+
+  .logos {
+    gap: 1rem; /* Reduced space between logos */
+  }
+}

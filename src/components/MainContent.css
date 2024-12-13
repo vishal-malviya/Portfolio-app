@@ -1,0 +1,65 @@
+/* src/components/MainContent.css */
+.intro-section {
+  display: flex;
+  justify-content: space-between; /* Space out items */
+  align-items: center; /* Center items vertically */
+  padding: 0rem;
+  background-image: url("./assests/images/background.png"); /* Use the provided path */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  min-height: 90vh; /* Ensure the section takes up full viewport height */
+}
+
+.intro-section .content {
+  flex: 1; /* Allow content to take available space */
+  margin-right: 5rem; /* Space between content and photo */
+}
+
+.intro-section .photo {
+  width: 400px; /* Adjust width */
+  height: 400px; /* Adjust height */
+  border-radius: 50%; /* Make it a circle */
+  background: url("./assests/images/profile.jpg") no-repeat center center; /* Use the provided path */
+  background-size: cover; /* Ensure the photo covers the circle */
+  margin-left: auto; /* Push the photo to the right */
+  margin-right:40px;
+  margin-top:0px;
+}
+
+.intro-section h1 {
+  font-size: 2.3rem;
+  margin-left: 250px; /* Remove default margin */
+  margin-top: auto;
+  opacity: 0.8; /* Slightly reduced opacity for a softer look */
+}
+
+.intro-section p {
+  font-size: 1rem;
+  margin: ; /* Remove default margin */
+  max-width: 500px;
+  margin-left: 140px; /* Remove default margin */
+  margin-bottom: 30px;
+  text-align: justify;
+  color: #b0b0b0; /* Light gray color for less emphasis */
+  font-weight: 300; /* Light font weight */
+  opacity: 0.9; /* Slightly reduced opacity for a softer look */
+}
+
+.intro-section button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #30A73B;
+  margin-left: 250px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+ font-family: "Inconsolata", monospace;
+   box-shadow: 4px 5px 5px rgba(255, 255 , 255, 0.2);
+
+}
+.intro-section button:hover {
+  background-color: #00796b; /* Darker cyan on hover */
+}

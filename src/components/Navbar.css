@@ -1,0 +1,94 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+  background-color: #333;
+  color: white;
+  margin-left: 3rem; /* Space between photo and content */
+  margin-right: 3rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: blink;
+  font-size: 1.1rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a:hover {
+  color: #00796b; /* Hover color for LinkedIn icon */
+  color: white;
+
+}
+
+/* Background for the page */
+.back {
+  background-image: url("./assests/images/background.png"); /* Use relative path */
+  background-size: cover;
+  background-position: center;
+}
+
+/* LinkedIn and Gmail icon styles */
+.linkedin-icon {
+  position: absolute;
+  top: 15px;  /* Adjust the top positioning */
+  right: 100px; /* Adjust the right positioning */
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.gmail-icon {
+  position: absolute;
+  top: 15px;  /* Adjust the top positioning */
+  right: 170px; /* Adjust the right positioning */
+  font-size: 30px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.linkedin-icon:hover, .gmail-icon:hover {
+ transform: scale(1.48); /* Slight zoom on hover */
+ box-shadow: 0 0 0.1px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a.active {
+  background-color: #30A73B;
+  color: white;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 3px 6px;
+}
+
+.linkedin-icon a, .gmail-icon {
+  color: white;
+  font-size: 30px; /* Size of the icons */
+  transition: color 0.3s ease;
+}
+
+.linkedin-icon a:hover, .gmail-icon:hover {
+  color: #00796b; /* Hover color for both icons */
+}
+
+/* Toast message styles */
+.toast {
+  position: fixed;
+  left: 85%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
