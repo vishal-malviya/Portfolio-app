@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio-app/static/css/main.a86913b2.css",
-    "main.js": "/Portfolio-app/static/js/main.a9b4c04e.js",
+    "main.css": "/Portfolio-app/static/css/main.a728dda0.css",
+    "main.js": "/Portfolio-app/static/js/main.f464142d.js",
     "static/js/488.363560c5.chunk.js": "/Portfolio-app/static/js/488.363560c5.chunk.js",
     "static/media/lufthansa.png": "/Portfolio-app/static/media/lufthansa.d4ebcfdcacc969a840d1.png",
     "static/media/rakuten.png": "/Portfolio-app/static/media/rakuten.98aa53828803c1789f02.png",
@@ -16,12 +16,12 @@
     "static/media/git.svg": "/Portfolio-app/static/media/git.71a5b8fe639ba6f15b928a1e108adfe6.svg",
     "static/media/spring.svg": "/Portfolio-app/static/media/spring.5d2df8438f124a52ecb490b5d7a08b9d.svg",
     "index.html": "/Portfolio-app/index.html",
-    "main.a86913b2.css.map": "/Portfolio-app/static/css/main.a86913b2.css.map",
-    "main.a9b4c04e.js.map": "/Portfolio-app/static/js/main.a9b4c04e.js.map",
+    "main.a728dda0.css.map": "/Portfolio-app/static/css/main.a728dda0.css.map",
+    "main.f464142d.js.map": "/Portfolio-app/static/js/main.f464142d.js.map",
     "488.363560c5.chunk.js.map": "/Portfolio-app/static/js/488.363560c5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a86913b2.css",
-    "static/js/main.a9b4c04e.js"
+    "static/css/main.a728dda0.css",
+    "static/js/main.f464142d.js"
   ]
 }
