@@ -1,42 +1,43 @@
+/* Main Certifications Container */
 .certifications-container {
   text-align: center;
   background-color: black;
   font-family: Arial, sans-serif;
   color: white;
   line-height: 1.6;
-  background-size: cover;
-  background-position: center;
-  justify-content: center;
-  align-items: center;
   padding: 30px;
   position: relative;
   z-index: 1;
 }
 
+/* Certification Slider */
 .certification-slider {
   width: 100%;
   margin-top: 80px;
-  height: 300px; /* Set a fixed height */
-  overflow: visible;
-  z-index: 2;
-  margin-bottom: 60px;
+  height: 300px;
+  overflow: visible; /* Allow certificates to show */
   display: flex;
   justify-content: center;
+  margin-bottom: 60px;
+  gap: 20px; /* Space between certificate cards */
 }
 
+/* Flexbox layout for certificate display */
 .certification-display {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Align certificates to the left */
   align-items: center;
+  flex-wrap: nowrap; /* Ensure certificates stay in a single row */
   position: relative;
 }
 
+/* Each Certification Card Styling */
 .certification-card {
   width: 220px; /* Fixed width for certificates */
-  height: 340px; /* Fixed height for certificates */
+  height: 340px;
   padding: 20px;
   background-color: #333;
-  border-radius: 40px;
+  border-radius: 20px; /* Slightly less rounded for a modern look */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -45,44 +46,40 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
   position: relative;
   z-index: 3;
-  margin: 0 20px;
   opacity: 0.8; /* Make all cards faded initially */
-  cursor: pointer; /* Add cursor pointer to indicate hoverable */
+  cursor: pointer;
+  margin: 0 15px; /* Adjust margins between the cards */
 }
 
-/* Hover effect for zooming in */
+/* Hover Effect for Zooming */
 .certification-card:hover {
   transform: scale(1.2); /* Zoom-in effect on hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Increase shadow for better focus */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   opacity: 1; /* Focus the hovered card */
 }
 
-/* The certification image */
+/* Certificate Image Styling */
 .certification-image {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* Increased margin for better separation */
 }
 
+/* Title and Text Styling */
 .certification-card h3 {
   margin-bottom: 10px;
-}
-
-.certification-h1 {
-  text-align: center;
-  font-size: 1.8rem;
-  opacity: 0.8;
-  margin-top: -10px;
-  color: #ffffff;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #fff;
 }
 
 .certification-card p {
   margin-bottom: 10px;
+  font-size: 0.9rem;
 }
 
+/* Button Styling */
 .view-link {
   background-color: #30A73B;
   color: white;
@@ -96,21 +93,34 @@
   background-color: #00796b;
 }
 
-.certifications-container .certification-display {
-  position: relative;
-  z-index: 1;
-}
-
-.certifications-container h2 {
-  margin-bottom: 10px;
+/* Header Styling */
+.certification-h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  opacity: 0.8;
+  color: #ffffff;
+  margin-bottom: 30px;
   z-index: 5;
 }
 
+/* Mobile & Small Screen Adjustments */
 @media (max-width: 768px) {
-  /* Adjustments for smaller screen sizes */
+  .certifications-container {
+    padding: 10px; /* Less padding on smaller screens */
+  }
+
+  /* Ensure certification display takes full height on mobile */
+  .certification-display {
+    flex-direction: column; /* Stack certificates vertically on small screens */
+    align-items: center; /* Center align certificates */
+    overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+    height: auto; /* Allow the height to grow based on content */
+  }
+
   .certification-card {
-    width: 180px;
-    height: 300px;
+    width: 180px; /* Slightly smaller cards on mobile */
+    height: auto; /* Make height auto for responsiveness */
+    margin: 15px 20px; /* Vertical margin for stacking */
   }
 
   .certification-image {
@@ -120,5 +130,32 @@
 
   .view-link {
     padding: 6px 12px;
+  }
+
+  /* Optional: Adjust hover effect or focus behavior on mobile */
+  .certification-card:hover {
+    transform: scale(1.1); /* Reduced zoom effect on mobile */
+  }
+
+  /* Ensure titles do not get truncated on mobile */
+  .certification-card h3 {
+    font-size: 1rem;
+  }
+
+  .certification-h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    opacity: 0.8;
+    color: #ffffff;
+  }
+  .certification-slider {
+    width: 100%;
+    margin-top: 9px;
+    height: 600px;
+    overflow: visible; /* Allow certificates to show */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+    gap: 20px; /* Space between certificate cards */
   }
 }

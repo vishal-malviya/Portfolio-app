@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   min-height: 90vh; /* Ensure the body fills at least the full viewport height */
-  margin: 0;
 }
 
 .skills-heading {
@@ -25,7 +24,7 @@
   justify-content: center;
   gap: 39px;
   flex-wrap: wrap;
-  flex-grow: 1; /* Allow this section to take up available space */
+  flex-grow: 0.3; /* Allow this section to take up available space */
 }
 
 .skill-item {
@@ -61,29 +60,43 @@
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
   .skills-section {
-    padding: 40px 20px;
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 75vh;
   }
 
   .skills-heading {
     font-size: 1.5rem; /* Adjust font size for mobile */
+    margin-top: 10px;
   }
 
   .skills-list {
-    gap: 20px; /* Decrease the gap between skill items */
+    display: flex;
+    flex-wrap: wrap;  /* Allow items to wrap to the next line */
+    gap: 30px; /* Adjust the gap between the skill items */
   }
 
   .skill-item {
-    width: 90px; /* Adjust size for mobile */
-    height: 90px;
-    padding: 10px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: #ffffff; /* Darker background for each skill item */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0.8;
+    margin-bottom: 40px;
   }
 
   .skill-item img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
 
   .skill-item p {
-    font-size: 0.9rem; /* Adjust font size for mobile */
+    font-size: 1rem; /* Adjust font size for mobile */
+    margin-top: 5px;
   }
 }

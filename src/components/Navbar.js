@@ -1,31 +1,43 @@
 import React, { useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
 
 function Navbar() {
   const location = useLocation(); // Get the current location (path)
   const [showToast, setShowToast] = useState(false); // State to show toast message
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State to manage mobile menu toggle
   const contactRef = useRef(null); // Reference to the contact form section
 
   // Function to handle the Gmail icon click
   const handleGmailClick = () => {
     if (location.pathname === '/contact') {
       // If already on the Contact page, scroll to the contact section
-     window.scrollTo({
-             top: document.body.scrollHeight, // Scroll to the bottom of the page
-             behavior: 'smooth', // Smooth scrolling
-           });
+      window.scrollTo({
+        top: document.body.scrollHeight, // Scroll to the bottom of the page
+        behavior: 'smooth', // Smooth scrolling
+      });
     } else {
       // Otherwise, redirect to the Contact page
       window.location.href = '/contact'; // Redirect to Contact page
     }
   };
 
+  // Function to toggle mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prevState) => !prevState);
+  };
+
   return (
     <div className="back">
       <nav className="navbar">
-        <ul>
+        {/* Hamburger icon for mobile */}
+        <div className="hamburger" onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <FaTimes size={30} color="white" /> : <FaBars size={30} color="white" />}
+        </div>
+
+        {/* Navbar Links */}
+        <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
           <li>
             <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
               Home

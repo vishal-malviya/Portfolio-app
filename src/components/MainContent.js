@@ -1,8 +1,7 @@
 // src/MainContent.js
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
+import { useNavigate } from 'react-router-dom';
 import './MainContent.css';
-
 
 function MainContent() {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -23,12 +22,10 @@ function MainContent() {
           I craft solutions that are not only functional but also user-friendly.
         </p>
         {/* Button that redirects to the contact page */}
-        <button className="view-project-link:hover" onClick={goToContactPage}>Let's get started > </button>
+        <button className="view-project-link" onClick={goToContactPage}>Let's get started &gt; </button>
       </div>
       <div className="photo"></div> {/* Circular photo */}
-     </main>
-
-
+    </main>
   );
 }
 

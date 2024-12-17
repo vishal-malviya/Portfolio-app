@@ -2,8 +2,12 @@
 .App {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* General styling for larger screens */
 .navbar {
   background-color: #333;
   padding: 10px;
@@ -20,9 +24,62 @@
   text-decoration: none;
 }
 
+/* Footer styling */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  /* Make navbar vertical on smaller screens */
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .navbar a {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Adjust the main content area for smaller screens */
+  .content {
+    padding: 20px;
+  }
+
+  /* Make footer more compact for smaller screens */
+  footer {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Larger screen adjustments, mobile-first approach */
+@media (min-width: 769px) {
+  /* Keep the navbar horizontal on desktop */
+  .navbar ul {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+
+  .navbar a {
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Main content area */
+  .content {
+    padding: 40px;
+  }
+
+  footer {
+    padding: 20px;
+    font-size: 16px;
+  }
 }

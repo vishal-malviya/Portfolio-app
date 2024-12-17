@@ -1,4 +1,4 @@
-/* Projects Section */
+/* Project Section */
 .projects-container {
   padding: 40px;
   background-color: black; /* Dark background */
@@ -66,7 +66,6 @@
 .key-features li {
   margin-bottom: 8px;
   color: #ffffff;
-
 }
 
 .project-summary {
@@ -74,7 +73,7 @@
   font-weight: 500;
   color: #ffffff;
   margin-bottom: 15px;
-   opacity: 0.9;
+  opacity: 0.9;
 }
 
 .view-project-link {
@@ -85,9 +84,9 @@
   font-size: 1rem;
   text-decoration: none;
   border-radius: 5px;
-  margin-left:200px;
+  margin-left: 200px;
   transition: background-color 0.1s;
-  box-shadow: 3px 4px 6px rgba(255, 255 , 255, 0.2);
+  box-shadow: 3px 4px 6px rgba(255, 255, 255, 0.2);
 }
 
 .view-project-link:hover {
@@ -100,12 +99,12 @@
   border-radius: 10px;
   box-shadow: 6px 6px 10px rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity:0.9
-
+  opacity: 0.9;
 }
+
 .project-image:hover {
-    transform: scale(1.05);  /* Zoom in */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05); /* Zoom in */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Reverse the order of image and content for the second project */
@@ -122,6 +121,7 @@
   order: 1;
 }
 
+/* Mobile View - Adjust the layout */
 @media (max-width: 768px) {
   .projects-container {
     padding: 15px;
@@ -144,15 +144,39 @@
   }
 
   .project {
-    grid-template-columns: 1fr; /* Stack content and image vertically on small screens */
+    display: flex; /* Use flexbox instead of grid */
+    flex-direction: column; /* Stack content and images vertically */
+    align-items: center; /* Center content */
+    gap: 20px; /* Add gap between items */
+    padding: 10px;
   }
 
   .project-description {
-    width: 100%; /* Make the description take full width */
+    width: 100%; /* Ensure description takes full width */
+    text-align: center;
   }
 
   .project-image {
-    width: 100%; /* Make image take full width */
-    margin-top: 15px;
+    width: 100%; /* Ensure the image takes full width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below the image */
+    box-shadow: none; /* Remove box-shadow for mobile */
+  }
+
+  .project-image:hover {
+    transform: scale(1.05); /* Zoom effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add hover effect */
+  }
+  .view-project-link {
+    display: inline-block;
+    background-color: #30A73B;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    transition: background-color 0.1s;
+    box-shadow: 3px 4px 6px rgba(255, 255, 255, 0.2);
   }
 }

@@ -1,4 +1,4 @@
-/* src/components/MainContent.css */
+/* MainContent styles */
 .intro-section {
   display: flex;
   justify-content: space-between; /* Space out items */
@@ -15,6 +15,7 @@
 .intro-section .content {
   flex: 1; /* Allow content to take available space */
   margin-right: 5rem; /* Space between content and photo */
+  max-width: 616px; /* Ensure content doesn’t exceed a reasonable width */
 }
 
 .intro-section .photo {
@@ -24,8 +25,8 @@
   background: url("./assests/images/profile.jpg") no-repeat center center; /* Use the provided path */
   background-size: cover; /* Ensure the photo covers the circle */
   margin-left: auto; /* Push the photo to the right */
-  margin-right:40px;
-  margin-top:0px;
+  margin-right: 40px;
+  margin-top: 0px;
 }
 
 .intro-section h1 {
@@ -37,7 +38,7 @@
 
 .intro-section p {
   font-size: 1rem;
-  margin: ; /* Remove default margin */
+  margin: 0;
   max-width: 500px;
   margin-left: 140px; /* Remove default margin */
   margin-bottom: 30px;
@@ -56,10 +57,59 @@
   color: white;
   border: none;
   border-radius: 3px;
- font-family: "Inconsolata", monospace;
-   box-shadow: 4px 5px 5px rgba(255, 255 , 255, 0.2);
-
+  font-family: "Inconsolata", monospace;
+  box-shadow: 4px 5px 5px rgba(255, 255 , 255, 0.2);
 }
+
 .intro-section button:hover {
   background-color: #00796b; /* Darker cyan on hover */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column; /* Stack elements vertically on mobile */
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: 70vh;
+  }
+
+  /* Change order for mobile view - photo before content */
+  .intro-section .content {
+    max-width: 100%; /* Make it full-width on smaller screens */
+    margin-right: 0; /* Remove any right margin */
+    margin-left: 0;  /* Remove left margin */
+    text-align: center; /* Center the text */
+    order: 2; /* Make content come after photo */
+  }
+
+  .intro-section .photo {
+    width: 180px; /* Smaller photo size for mobile */
+    height: 180px;
+    margin-left: 30px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    order: 1; /* Make the photo come before content */
+  }
+
+  .intro-section h1 {
+    font-size: 1.8rem; /* Adjust font size for smaller screens */
+    margin-left: 0; /* Remove the left margin */
+  }
+
+  .intro-section p {
+    font-size: 0.95rem; /* Smaller font size for mobile */
+    margin-left: 0;
+    text-align: center;
+    max-width: 90%; /* Ensure the paragraph doesn't stretch too wide */
+    margin-bottom: 1rem;
+  }
+
+  .intro-section button {
+    margin-left: 0; /* Center the button */
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.8rem; /* Adjust padding for mobile */
+  }
 }
